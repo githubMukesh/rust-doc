@@ -1,0 +1,7 @@
+# hello_cargo/target/
+# guessing_game/target/
+# Generated files
+**/target/
+
+# Well, this depends... See below!
+Cargo.lock
