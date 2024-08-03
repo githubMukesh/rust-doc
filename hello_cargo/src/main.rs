@@ -1,12 +1,30 @@
 use std::{io::stdin, string};
+mod condition;
 
 fn main() {
     println!("Hello, world!");
 
-    shadowing();
-    tupe_arr();
-    arr_access_error();
+    // let x = {
+    //     let x = 1;
+    //     x+4
+    // };
+    // println!("{}", x);
 
+    // println!("five {}", five());
+
+    condition::multiple_condition();
+    condition::printTable(89);
+    condition::printTableWithWhile(12);
+    condition::iterateOverArray(&mut [1,3,4,5,6]);
+    // shadowing();
+    // tupe_arr();
+    // arr_access_error();
+
+}
+
+fn five() -> i32 {
+    let x = 18;
+    return  x + 10
 }
 
 fn shadowing() {
