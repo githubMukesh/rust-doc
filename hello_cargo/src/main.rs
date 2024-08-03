@@ -3,32 +3,43 @@ use std::{io::stdin, string};
 fn main() {
     println!("Hello, world!");
 
-    // Shadowing
-    // let a = 5;
+    shadowing();
+    tupe_arr();
+    arr_access_error();
 
-    // let a = 5;
+}
 
-    // let guess: String = "abcs".parse().expect("Not a number!");
+fn shadowing() {
+        // Shadowing
+    let a = 5;
+
+    let a = 5;
+
+    let guess: String = "abcs".parse().expect("Not a number!");
     
-    // const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
+    const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
 
-    // {
-    //    let a = a * 9;
+    {
+       let a = a * 9;
 
-    //    println!("I am printing from curly braces {}", a);
-    // }
+       println!("I am printing from curly braces {}", a);
+    }
 
-    // println!("The value of a {} and seconds {} and guess {}", a, THREE_HOURS_IN_SECONDS, guess);
+    println!("The value of a {} and seconds {} and guess {}", a, THREE_HOURS_IN_SECONDS, guess);
+}
 
-    /* ----------------------------------------------Tuples and Array---------------------------- */
+fn tupe_arr() {
 
     println!("----------------------------------------------Tuples and Array----------------------------");
  
-    // let tup = ("Thomas", 18, 99.99);
+    let tup = ("Thomas", 18, 99.99);
 
-    // let (name, age, wealth) = tup;
+    let (name, age, wealth) = tup;
 
-    // println!("Name {} Age {} Wealth {}", name, age, wealth);
+    println!("Name {} Age {} Wealth {}", name, age, wealth);
+}
+
+fn arr_access_error() {
 
     println!("----------------------Generating error---------------------");
 
@@ -50,5 +61,4 @@ fn main() {
     let element = a[index];
 
     println!("The value of the element at index {index} is: {element}");
-
 }
